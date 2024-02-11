@@ -14,5 +14,6 @@
 !gpiofunction/**/
 !gpiofunction/
 !GPIOfucntion2
+!StateMachine
 !build
 !.gitignore
