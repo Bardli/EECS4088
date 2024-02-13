@@ -15,5 +15,7 @@
 !gpiofunction/
 !GPIOfucntion2
 !StateMachine
+!ETL&STL/
+!ETL&STL/test
 !build
 !.gitignore
