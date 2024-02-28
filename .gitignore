@@ -9,6 +9,10 @@
 *
 !*.cpp
 !*.h
+!*.c
+!*.cmd
+!*.sim
+!makefile 
 !RoundRobin
 !Makefile
 !gpiofunction/**/
@@ -19,3 +23,6 @@
 !ETL&STL/test
 !build
 !.gitignore
+!PRU_package
+!PRU_package/**/
+!simPRU
