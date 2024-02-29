@@ -1,29 +1,33 @@
-# This repo is made for the EECS4088 project
-This page will introduce each file in the repo
+# EECS4088 Project Repository
 
-## blinkLED
-This file is made by Derek Molloy
+Welcome to the EECS4088 project repository. This repository contains various files and code examples related to embedded systems programming, focusing primarily on BeagleBone Black functionalities. Below is an introduction to each file within the repo:
 
-## ETL&STL
-This file contains basic algorithm tests between ETL and STL. It include find(),heap(),min(),move(),sort() functions with timer.
+### `blinkLED`
+- **Author:** Derek Molloy
+- **Description:** This file contains a basic example of how to blink an LED on the BeagleBone Black, demonstrating basic GPIO manipulation.
 
-## GPIOfunction2
-This is not being successfully implemented, PWM
+### `ETL&STL`
+- **Description:** This file is dedicated to comparing basic algorithms between Embedded Template Library (ETL) and Standard Template Library (STL). It includes performance tests for functions such as `find()`, `heap()`, `min()`, `move()`, and `sort()`, each accompanied by a timing mechanism to evaluate efficiency.
 
-## GPIOfunction
-Proof of concept of manipulating the LED through an external library
+### `GPIOfunction2`
+- **Status:** Not successfully implemented
+- **Description:** Attempt to implement Pulse Width Modulation (PWM) control, focusing on advanced GPIO manipulation. This file remains a work in progress.
 
-## PRU_package
-Proof of concept based on the website https://catch22eu.github.io/website/beaglebone/beaglebone-pru-ipc 
+### `GPIOfunction`
+- **Description:** Demonstrates a proof of concept for controlling an LED using an external library, showcasing practical GPIO usage.
 
-## prutest
-Memory manipulation made by Derek Molloy
+### `PRU_package`
+- **Description:** Provides a proof of concept based on the guide available at [Catch22EU's BeagleBone PRU IPC tutorial](https://catch22eu.github.io/website/beaglebone/beaglebone-pru-ipc). It is designed to showcase inter-processor communication (IPC) capabilities with the Programmable Real-time Unit (PRU).
 
-## RoundRobin
-This is a round-robin schedular, the registered tasks are flashing LED
+### `prutest`
+- **Author:** Derek Molloy
+- **Description:** Focuses on memory manipulation techniques, specifically for the BeagleBone's PRU. This file is part of a larger exploration into the capabilities and applications of PRU programming.
 
-## simPRU
-Trying to work with an external library with https://docs.beagleboard.org/latest/projects/simppru/basics.html
+### `RoundRobin`
+- **Description:** Implements a simple round-robin scheduler. The registered tasks within this scheduler focus on flashing an LED, demonstrating task scheduling in an embedded system context.
 
-## StateMachine
-state machine schedular made for flashing light.
+### `simPRU`
+- **Description:** Attempts to integrate and utilize an external library for PRU simulation, based on the documentation available at [BeagleBoard's simPRU guide](https://docs.beagleboard.org/latest/projects/simppru/basics.html).
+
+### `StateMachine`
+- **Description:** Implements a state machine scheduler specifically designed for controlling lighting sequences. This is intended to demonstrate the application of state machines in embedded system scheduling and control.
