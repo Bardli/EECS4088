@@ -7,10 +7,10 @@ Welcome to the EECS4088 project repository. This repository contains various fil
 - **Description:** This file contains a basic example of how to blink an LED on the BeagleBone Black, demonstrating basic GPIO manipulation.
 
 ### `ETL&STL`
+- **Author:** Baidu Li
 - **Description:** This file is dedicated to comparing basic algorithms between Embedded Template Library (ETL) and Standard Template Library (STL). It includes performance tests for functions such as `find()`, `heap()`, `min()`, `move()`, and `sort()`, each accompanied by a timing mechanism to evaluate efficiency.
 
 ### `GPIOfunction2`
-- **Status:** Not successfully implemented
 - **Description:** Attempt to implement Pulse Width Modulation (PWM) control, focusing on advanced GPIO manipulation. This file remains a work in progress.
 
 ### `GPIOfunction`
