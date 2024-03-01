@@ -38,23 +38,12 @@
 #include <pru_cfg.h>
 #include "resource_table_empty.h"
 
-#define PRU0_DRAM  0x00000000
-volatile uint32_t *pru0Mem = (unsigned int *) PRU0_DRAM;
-#define PRU1_DRAM  0x00002000
-volatile uint32_t *pru1Mem = (unsigned int *) PRU1_DRAM;
-#define SHARE_MEM  0x00010000
-volatile uint32_t *shared =  (unsigned int *) SHARE_MEM;
-
+// The function is defined in perfTestLED.asm in same dir
+// Declaration is here, defination is linked to the .asm
 extern void start(void);
 
 void main(void)
 {
-   //pru0Mem[0] = 0xEBBFEED0;
-   //pru0Mem[1] = 0xEBBFEED1;
-   //pru1Mem[0] = 0xEBBFEED2;
-   //pru1Mem[1] = 0xEBBFEED3;
-   //shared[0]  = 0xEBBFEED4;
-   //shared[1]  = 0xEBBFEED5;
-   //shared[2]  = 0xEBBFEED6;
-   start();
+   START();
 }
+

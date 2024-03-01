@@ -1,7 +1,4 @@
 /*
- * Source Modified by Derek Molloy for Exploring BeagleBone Rev2
- * Based on the examples distributed by TI
- *
  * Copyright (C) 2015 Texas Instruments Incorporated - http://www.ti.com/
  *
  *
@@ -34,27 +31,42 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdint.h>
-#include <pru_cfg.h>
-#include "resource_table_empty.h"
+/*
+ *  ======== resource_table_empty.h ========
+ *
+ *  Define the resource table entries for all PRU cores. This will be
+ *  incorporated into corresponding base images, and used by the remoteproc
+ *  on the host-side to allocated/reserve resources.  Note the remoteproc
+ *  driver requires that all PRU firmware be built with a resource table.
+ *
+ *  This file contains an empty resource table.  It can be used either as:
+ *
+ *        1) A template, or
+ *        2) As-is if a PRU application does not need to configure PRU_INTC
+ *                  or interact with the rpmsg driver
+ *
+ */
 
-#define PRU0_DRAM  0x00000000
-volatile uint32_t *pru0Mem = (unsigned int *) PRU0_DRAM;
-#define PRU1_DRAM  0x00002000
-volatile uint32_t *pru1Mem = (unsigned int *) PRU1_DRAM;
-#define SHARE_MEM  0x00010000
-volatile uint32_t *shared =  (unsigned int *) SHARE_MEM;
+#ifndef _RSC_TABLE_PRU_H_
+#define _RSC_TABLE_PRU_H_
 
-extern void start(void);
+#include <stddef.h>
+#include <rsc_types.h>
 
-void main(void)
-{
-   //pru0Mem[0] = 0xEBBFEED0;
-   //pru0Mem[1] = 0xEBBFEED1;
-   //pru1Mem[0] = 0xEBBFEED2;
-   //pru1Mem[1] = 0xEBBFEED3;
-   //shared[0]  = 0xEBBFEED4;
-   //shared[1]  = 0xEBBFEED5;
-   //shared[2]  = 0xEBBFEED6;
-   start();
-}
+struct my_resource_table {
+	struct resource_table base;
+
+	uint32_t offset[1]; /* Should match 'num' in actual definition */
+};
+
+#pragma DATA_SECTION(pru_remoteproc_ResourceTable, ".resource_table")
+#pragma RETAIN(pru_remoteproc_ResourceTable)
+struct my_resource_table pru_remoteproc_ResourceTable = {
+	1,	/* we're the first version that implements this */
+	0,	/* number of entries in the table */
+	0, 0,	/* reserved, must be zero */
+	0,	/* offset[0] */
+};
+
+#endif /* _RSC_TABLE_PRU_H_ */
+
