@@ -4,7 +4,7 @@
         .asg 0x00000000, CONTROL_FLAG ; Address of the control flag
         .asg 0x00000004, COUNT_STORAGE ; Address to store the count
         .asg 0x001 ,TIMER_ACTIVE            ; Value indicating the timer should be running
-        .asg "5000000" ,DELAY_ITERATIONS ; 5000 cycle for 1 us
+        .asg "5000" ,DELAY_ITERATIONS ; 5000 cycle for 1 us
 ; Main loop
 
 START:
