@@ -16,7 +16,7 @@ enum State {
 
 // Current state
 State currentState = DIM;
-GPIO RED_LED(60);
+GPIO RED_LED(50);
 GPIO WHITE_LED(31);
 
 // Function to transition to the next state
@@ -81,7 +81,6 @@ void stoppedState() {
 
 // Main scheduler loop
 int main() {
-    
     while (currentState != STOPPED) {
         switch (currentState) {
             case DIM:

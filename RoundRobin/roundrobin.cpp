@@ -45,7 +45,7 @@ int main() {
 
     // Manually adding processes
     
-    Process* task1= new Process(1, 10, 60);
+    Process* task1= new Process(1, 10, 50);
     Process* task2= new Process(2, 10, 31);
     processes.emplace_back(task1);
     processes.emplace_back(task2);

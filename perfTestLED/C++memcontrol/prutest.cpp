@@ -17,8 +17,8 @@ int main() {
     snprintf(command, sizeof(command), "devmem2 %s w %s", writeAddress, valueToWrite);
     system(command);
 
-    // Wait for 1 second
-    sleep(1);
+    // Wait for 5 second
+    sleep(5);
 
     // Set the value at address 0x4a300000 back to 0
     snprintf(command, sizeof(command), "devmem2 %s w %s", writeAddress, resetValue);
